@@ -297,9 +297,11 @@ html a {
   width: 40px;
   border: 1px solid white;
   border-radius: 150px;
+  mix-blend-mode: difference;
   transform: scale(1);
   transition: 0.4s ease-in-out;
   animation: Anim1 1s infinite alternate;
+  opacity: 0;
   z-index: 100;
 }
 .navigation .menu .menuicon:before {
@@ -318,7 +320,6 @@ html a {
 }
 .navigation .menu .expand {
   animation: Anim2 4.5s ease-in-out;
-  background: white(177, 177, 89);
   border: 1px dotted #333;
   transition: ease-in-out;
 }
@@ -335,6 +336,10 @@ html a {
   font-size: 20px;
   z-index: 100;
   opacity: 0;
+}
+
+.activeCircle {
+  opacity: 1 !important;
 }
 
 @keyframes Anim2 {
